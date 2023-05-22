@@ -6,8 +6,8 @@ class NivelController {
       try {
         const todosOsNiveis = await database.Niveis.findAll()
         return res.status(200).json(todosOsNiveis)
-      } catch (error) {
-        return res.status(500).json(error.message);
+      } catch (erro) {
+        return res.status(500).json(erro.message);
       }
     }
 
