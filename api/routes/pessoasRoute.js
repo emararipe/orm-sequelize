@@ -4,7 +4,7 @@ const PessoaController = require('../controllers/PessoaController.js')
 const router = Router()
 
 router.get('/pessoas/todas', PessoaController.pegaTodasAsPessoas)
-router.get('/pessoas', PessoaController.p)
+router.get('/pessoas', PessoaController.pegaPessoasAtivas)
 router.get(`/pessoas/:id`, PessoaController.pegaUmaPessoa)
 router.post('/pessoas', PessoaController.criaPessoa)
 router.put('/pessoas/:id', PessoaController.atualizaPessoa)
