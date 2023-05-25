@@ -8,43 +8,43 @@ module.exports = {
       [
         {
           status: "confirmado",
-          estudante_id: 1,
-          turma_id: 1,
+          estudante_id: 92,
+          turma_id: 54,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           status: "confirmado",
-          estudante_id: 2,
-          turma_id: 1,
+          estudante_id: 93,
+          turma_id: 54,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           status: "confirmado",
-          estudante_id: 3,
-          turma_id: 2,
+          estudante_id: 94,
+          turma_id: 55,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           status: "confirmado",
-          estudante_id: 4,
-          turma_id: 3,
+          estudante_id: 95,
+          turma_id: 56,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           status: "cancelado",
-          estudante_id: 1,
-          turma_id: 2,
+          estudante_id: 92,
+          turma_id: 54,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           status: "cancelado",
-          estudante_id: 2,
-          turma_id: 2,
+          estudante_id: 93,
+          turma_id: 55,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -53,5 +53,7 @@ module.exports = {
     )
   },
 
-  async down(queryInterface, Sequelize) {},
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete("Matriculas", null, {})
+  },
 }

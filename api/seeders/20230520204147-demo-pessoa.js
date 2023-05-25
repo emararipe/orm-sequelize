@@ -54,13 +54,21 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          nome: "Sergiane Araujo",
+          nome: "Sergiane Cardoso",
           ativo: true,
           email: "sergiane@sergiane.com",
           role: "docente",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          nome: "TESTE222",
+          ativo: true,
+          email: "TESTE@TESTE222.com",
+          role: "docente",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }
       ],
       {}
     )
