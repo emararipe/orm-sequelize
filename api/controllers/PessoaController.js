@@ -135,8 +135,7 @@ class PessoaController {
     const { estudanteId } = req.params
 
     try {
-      const pessoa = await pessoasServices.pegaUmRegistro(estudanteId)
-      const matriculas = await pessoa.getAulasMatriculadas()
+      const matriculas = await pessoasServices.pegaMatriculasPorEstudante({ id: Number(estudanteId) })
       return res.status(200).json(matriculas)
     } catch (erro) {
       return res.status(500).json(erro.message)

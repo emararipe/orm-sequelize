@@ -7,16 +7,7 @@ class MatriculasServices extends Services {
     super("Matriculas")
   }
 
-  async pegaTurmasLotadas(lotacao) {
-    return database[this.nomeModelo].findAndCountAll({
-      where: {
-        status: "confirmado",
-      },
-      attributes: ["turma_id"],
-      group: ["turma_id"],
-      having: Sequelize.literal(`count(turma_id) >= ${lotacao}`)
-    })
-  }
+  
 }
 
 module.exports = MatriculasServices
